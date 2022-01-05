@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <title>Amozesh</title>
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <p class="box"><span style="font-weight: bold" th:text="${name}">نام </span> عزیر خوش آمدید</p>
+        <a href="/" class="btn btn-2">خروج</a>
+    </header>
+
+    <div class="niceShadow"></div>
+
+    <nav>
+        <button class="btn btn-1" type='show-plan'>مشاهده برنامه</button>
+        <button class="btn btn-1" type='insert-grade'>وارد کردن نمره</button>
+    </nav>
+    <section>
+        <iframe id="frame" frameborder="0"></iframe>
+    </section>
+</div>
+
+<script src="../../scripts/master.js"></script>
+</body>
+</html>

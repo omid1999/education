@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="searchForm" action="" method="get">
+        <input required type="text" name="userId" id="userId" placeholder="نام کاربری">
+
+        <select name="who" id="">
+            <option value="amozesh" >آموزش</option>
+            <option value="student" selected>دانشجو</option>
+            <option value="master">استاد</option>
+        </select>
+        <input type="submit" id='sub' value="جستجو">
+    </form>
+
+    <script>
+        {
+            let btn = document.querySelector('#searchForm');
+            let inputText = querySelector('#userId');
+
+            btn.addEventListener('submit', function(e) {
+                if(inputText.value == '' || inputText.value == null)
+                    e.preventDefault();
+            });
+        }
+    </script>
+</body>
+</html>

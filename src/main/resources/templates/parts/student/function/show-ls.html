@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>کد درس</th>
+            <th>نام درس</th>
+            <th>کد استاد</th>
+            <th>نام استاد</th>
+            <th>تاریخ امتحان</th>
+            <th>روز اول</th>
+            <th>روز دوم</th>
+        </thead>
+        <tbody th:each="lesson:${lessons}">
+            <td th:text="${lesson}?${lesson.getId()}"></td>
+            <td th:text="${lesson}?${lesson.getName()}"></td>
+            <td th:text="${lesson}?${lesson.getMaster().getId()}"></td>
+            <td th:text="${lesson}?${lesson.getMaster().getName()}"></td>
+            <td th:text="${lesson}?${lesson.getExamDate()}"></td>
+            <td th:text="${lesson}?${lesson.convertTime(lesson.getTime1())}"></td>
+            <td th:text="${lesson}?${lesson.convertTime(lesson.getTime2())}"></td>
+        </tbody>
+    </table>
+</body>
+</html>

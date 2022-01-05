@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+<table>
+    <thead>
+    <th>کد درس</th>
+    <th>نام درس</th>
+    <th>کد استاد</th>
+    <th>نام استاد</th>
+    <th>تاریخ امتحان</th>
+    <th>روز اول</th>
+    <th>روز دوم</th>
+    <th>نمره</th>
+    </thead>
+    <tbody th:each="stls:${stLs}">
+    <td th:text="${stls}?${stls.getLesson().getId()}"></td>
+    <td th:text="${stls}?${stls.getLesson().getName()}"></td>
+    <td th:text="${stls}?${stls.getLesson().getMaster().getId()}"></td>
+    <td th:text="${stls}?${stls.getLesson().getMaster().getName()}"></td>
+    <td th:text="${stls}?${stls.getLesson().getExamDate()}"></td>
+    <td th:text="${stls}?${stls.getLesson().convertTime(stls.getLesson().getTime1())}"></td>
+    <td th:text="${stls}?${stls.getLesson().convertTime(stls.getLesson().getTime2())}"></td>
+    <td th:if="${stls != null}" th:text="${stls.getScore() != 'null'}?${stls.getScore()}:'-'"></td>
+    </tbody>
+</table>
+</body>
+</html>

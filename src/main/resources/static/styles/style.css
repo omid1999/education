@@ -1,0 +1,250 @@
+/* Global */
+@font-face {
+    font-family: IRANSans;
+    src: url('/IRANSans.ttf');
+}
+
+* {
+    font-family: IRANsans, 'calibri';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    direction: rtl;
+}
+
+body {
+    background-color: #ebebeb;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.5vmax !important;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.btn {
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.4vmax;
+    padding: 0.5vmax 1vmax;
+    font-size: inherit;
+}
+
+.btn-1 {
+    background-color: #333;
+    color: rgb(223, 142, 158);
+}
+.btn-1:hover {
+    background-color: rgb(199, 85, 108);
+    color: #333;
+    box-shadow: 0 0 1vmax lightcoral;
+}
+
+.btn-selected {
+    background-color: rgba(202, 55, 85, 0.5);
+    color: #111;
+    box-shadow: 0 0 1vmax rgb(235, 32, 32);
+    transition: border-radius 400ms;
+    border-radius: 1vmax;
+    font-weight: bold;
+}
+
+.btn-2 {
+    background-color: lightcoral;
+    color: #333;
+}
+.btn-2:hover {
+    background-color: #fff;
+    color: red;
+    box-shadow: 0 0 1vmax 0.1vmax red;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    color: #fff;
+    left: 0;
+    top: 0;
+    background-color: #333;
+    padding: 1% 2.5% 1% 1%;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 0 1vmax lightcoral;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    top: 15%;
+    padding: 0 2% 0 2%;
+    flex-direction: column;
+    width: 22%;
+    text-align: center;
+    justify-content: space-between;
+    height: 80%;
+    border-left: 0.2vmax solid rgba(240, 128, 128, 0.301);
+}
+
+section {
+    position: fixed;
+    top: 15%;
+    left: 0;
+    padding: 1%;
+    width: 73%;
+    margin-left: 2.5%;  
+    height: 80%;
+    overflow-y: auto;
+    box-shadow: 0 0 0.5vmax  lightcoral;
+    border-radius: 0.5vmax;
+}
+section iframe {
+    height: 100%;
+    width: 100%;
+}
+
+section::-webkit-scrollbar {
+    display: none;
+}
+
+.global {
+    margin: 0;
+    margin-bottom: 1vmax;
+    padding: 1vmax;
+    offset: 0;
+    height: 5vmax;
+    max-width: 40vmax !important;
+    font-size: 2vmax;
+}
+.global-select {
+    width: 15vmax;
+}
+
+/* form style */
+
+form {
+    width: fit-content;
+}
+
+input, select, label{
+    border: none;
+    padding: 1vmax;
+    border-radius: 1vmax;
+    background-color: lightcoral;
+    color: #333;
+}
+label{
+    background-color: rgba(240, 128, 128, 0.39);
+}
+input[type=submit] {
+    background-color: #333;
+    color: lightcoral;
+}
+input[type=submit]:hover {
+    background-color: #555;
+}
+
+select {
+    appearance: none;
+    background-image: url('../images/arrow-down.png');
+    background-repeat: no-repeat;
+    background-size:2vmax;
+    background-position-y: 50%;
+    background-position-x: 2%;
+    padding: 1vmax;
+}
+::placeholder {
+    color: rgb(243, 182, 182);
+}
+input[type='text']:focus ,
+select:focus
+{
+    outline: none;
+    box-shadow: 0 0 1vmax #333 !important;
+    
+}
+input:-webkit-autofill,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #333;
+    -webkit-box-shadow: 0 0 0px 1000px lightcoral inset;
+    transition: background-color 10000s ease-in-out 0s;
+}
+
+table {
+    width: 100%;
+    font-size: 1.4vmax;
+    border-spacing:0.5vmax 1vmax;
+}
+table thead,
+table tbody {
+}
+table thead th{
+    border-radius: 0.5vmax;
+    background-color: #333;
+    color: lightcoral;
+    padding: 1%;
+}
+table tbody td {
+    border-radius: 0.5vmax;
+    text-align: center;
+    color: #333;
+    padding: 1%;
+}
+table tbody:nth-child(2n+1) {
+    background-color: rgba(240, 128, 128, 0.397);
+}
+
+/* search page */
+
+#searchForm {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%,-50%);
+}
+#searchForm select, 
+#searchForm input{
+    font-size: 3vmax;
+}
+#searchForm select {
+    width: 13.5vmax;
+    height: 7vmax;
+}
+
+#searchForm input[type=submit]:active {
+    box-shadow: 0 0 1vmax 0.3vmax lightcoral;
+}
+/* func */
+#confilict {
+    text-align: center;
+    background-color: yellow;
+    border-radius: 1vmax;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+/* log */
+#log {
+    width: 100%;
+    background-color: #333333;
+    color: lime;
+    position: relative;
+    border-radius: 1vmax;
+}
+
+#log-out {
+    text-align: center;
+}
+#log-html {
+    direction: ltr;
+}

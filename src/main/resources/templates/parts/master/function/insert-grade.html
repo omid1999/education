@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../styles/style.css">
+    <title>Document</title>
+</head>
+<body >
+<form>
+    <label for="ls" class="global">کد دانشجو</label>
+    <input class="global" type="search" name="searchId" id="ls" placeholder="شناسه درس">
+    <label for="st" class="global">کد درس</label>
+    <input class="global" type="search" name="searchlsId" id="st" placeholder="شناسه درس">
+    <input type="submit" value="ذخیره">
+</form>
+
+<form method="get" style="width: 100%">
+            <input type="text" name="stId" th:value="${allLesson}?${allLesson.getStudent().getId()}" readonly style="pointer-events: none;">
+            <label th:text="${allLesson}?${allLesson.getStudent().getName()}">نام دانشجو</label>
+            <input type="text" name="lsId" th:value="${allLesson}?${allLesson.getLesson().getId()}" readonly style="pointer-events: none;">
+            <label th:text="${allLesson}?${allLesson.getLesson().getName()}">نام درس</label>
+            <input  id="inp" type="text" th:if="${allLesson != null}" th:value="${allLesson.getScore() != 'null'}?${allLesson.getScore()}" name="grade">
+            <input type="submit" value="ذخیره">
+</form>
+<script>
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../styles/style.css">
+</head>
+<body>
+    <form method="get" >
+        <label class="global" for="sl">انتخاب واحد</label>
+        <select class="global" name="state" id="sl">
+            <option value="1" th:selected="${state}?${state == '1'}">فعال</option>
+            <option value="0" th:selected="${state}?${state == '0'}">غیرفعال</option>
+        </select>
+        <input class="global" type="submit" value="ذخیره">
+    </form>
+</body>
+</html>

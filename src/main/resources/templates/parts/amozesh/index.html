@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/style.css">
+    <title>Amozesh</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <p class="box"><span style="font-weight: bold" th:text="${name}">نام </span> عزیر خوش آمدید</p>
+            <a href="/" class="btn btn-2">خروج</a>
+        </header>
+    
+        <div class="niceShadow"></div>
+    
+        <nav>
+            <button class="btn btn-1" type='make-st'>ایجاد دانشجو</button>
+            <button class="btn btn-1" type='make-ms'>ایجاد استاد</button>
+            <button class="btn btn-1" type='edit-st'>تغییر اطلاعات دانشجو</button>
+            <button class="btn btn-1" type='edit-ms'>تغییر اطلاعات استاد</button>
+            <button class="btn btn-1" type='make-ls'>ایجاد درس جدید</button>
+            <button class="btn btn-1" type='edit-ls'>تغییر اطلاعات درس</button>
+            <button class="btn btn-1" type='enable-uc'>فعال کردن انتخاب واحد ها</button>
+        </nav>
+        <section>
+            <iframe id="frame" frameborder="0"></iframe>
+        </section>
+    </div>
+    
+    <script src="../../scripts/amozesh.js"></script>
+</body>
+</html>

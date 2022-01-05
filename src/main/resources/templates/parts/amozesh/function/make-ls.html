@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="../../styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="name" class="global" >نام درس</label>
+        <input required type="text" class="global" name="lessonName" id="name"><br>
+        <label for="masterName" class="global">استاد درس</label>
+        <input required type="text" class="global" name="masterName" id="masterName"><br>
+        <label class="global" for="examD">تاریخ امتحان</label>
+        <input required type="text" class="global" name="examDate" id="examD" placeholder="yyyy-mm-dd"><br>
+
+        <label class="global" for="day1" >تایم اول</label>
+        <select class="global global-select" name="day1" id="day1">
+            <option value="1">شنبه</option>
+            <option value="2">یکشنبه</option>
+            <option value="3">دوشنبه</option>
+            <option value="4">سه شنبه</option>
+            <option value="5">چهارشنبه</option>
+            <option value="6">پنج شنبه</option>
+        </select>
+        <select class="global global-select" name="hour1" id="hour1">
+            <option value="1">8-10</option>
+            <option value="2">10-12</option>
+            <option value="3">12-14</option>
+            <option value="4">14-16</option>
+            <option value="5">16-18</option>
+            <option value="6">18-20</option>
+        </select>
+        <select class="global global-select" name="oddEven1" id="odd-even1">
+            <option value="2">زوج</option>
+            <option value="1">فرد</option>
+            <option value="0" selected>زوج-فرد</option>
+        </select><br>
+        
+        <label class="global" for="day2" >تایم دوم</label>
+        <select class="global global-select" name="day2" id="day2">
+            <option value="no">هیچکدام</option>
+            <option value="1">شنبه</option>
+            <option value="2">یکشنبه</option>
+            <option value="3">دوشنبه</option>
+            <option value="4">سه شنبه</option>
+            <option value="5">چهارشنبه</option>
+            <option value="6">پنج شنبه</option>
+        </select>
+        <select class="global global-select" name="hour2" id="hour2">
+            <option value="no">هیچکدام</option>
+            <option value="1">8-10</option>
+            <option value="2">10-12</option>
+            <option value="3">12-14</option>
+            <option value="4">14-16</option>
+            <option value="5">16-18</option>
+            <option value="6">18-20</option>
+        </select>
+        <select class="global global-select" name="oddEven2" id="odd-even2">
+            <option value="no">هیچکدام</option>
+            <option value="2">زوج</option>
+            <option value="1">فرد</option>
+            <option value="0">زوج-فرد</option>
+        </select><br>
+        <input class="global" type="submit" value="ذخیره">
+    </form>
+</body>
+</html>
